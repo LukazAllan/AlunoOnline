@@ -22,4 +22,8 @@ public class AlunoService {
         return alunoRepository.findById(id);
     }
 
+    public void newAluno(Aluno aluno){
+        alunoRepository.save(aluno);
+    }
+
 }

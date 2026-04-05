@@ -27,4 +27,10 @@ public class AlunoController {
     public Optional<Aluno> getAlunoById(@PathVariable Long id){
         return alunoService.getAlunoById(id);
     }
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public void newAluno(@RequestBody Aluno aluno){
+        alunoService.newAluno(aluno);
+    }
 }
