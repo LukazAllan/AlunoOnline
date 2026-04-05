@@ -30,4 +30,9 @@ public class AlunoService {
         alunoRepository.deleteById(id);
     }
 
+    public void altAlunoById(Long id, Aluno aluno){
+        aluno.setId(id);
+        alunoRepository.save(aluno);
+    }
+
 }

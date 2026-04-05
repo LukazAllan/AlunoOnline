@@ -39,4 +39,10 @@ public class AlunoController {
     public void remAlunoById(@PathVariable Long id){
         alunoService.remAlunoById(id);
     }
+
+    @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void altAlunoById(@PathVariable Long id, @RequestBody Aluno aluno){
+        alunoService.altAlunoById(id, aluno);
+    }
 }
