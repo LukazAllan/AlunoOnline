@@ -100,10 +100,37 @@ A arquitetura do projeto segue o padrão **MVC (Model-View-Controller)** adaptad
 - **Configuração**: Conexão local (`localhost:5432`), banco `alunoonline`.
 - **DDL Auto**: Hibernate atualiza o esquema automaticamente com base nas entidades.
 
-### Segurança e Boas Práticas
-- Embora não implementada neste projeto básico, recomenda-se adicionar autenticação/autorização (ex.: Spring Security) para produção.
-- Validação de entrada com Bean Validation.
-- Tratamento de exceções global com `@ControllerAdvice`.
+## Prints
+
+### Endpoints da API/Requisições do Insomnia
+- **Alunos**:
+    - `GET /alunos`: Lista todos os alunos.
+      ![](img/getAllAlunos.png)
+    - `GET /alunos/{id}`: Busca aluno por ID.
+      ![](img/insomnia.png)
+    - `POST /alunos`: Cria novo aluno.
+      ![](img/newAluno.png)
+    - `PUT /alunos/{id}`: Atualiza aluno.
+      ![](img/altAlunoById.png)
+    - `DELETE /alunos/{id}`: Remove aluno.
+      ![](img/remAlunoById.png)
+
+- **Professores**:
+    - `GET /professores`: Lista todos os professores.
+      ![](img/getAllProfessores.png)
+    - `GET /professores/{id}`: Busca professor por ID.
+      ![](img/getProfessorById.png)
+    - `POST /professores`: Cria novo professor.
+      ![](img/newProfessor.png)
+    - `PUT /professores/{id}`: Atualiza professor.
+      ![](img/altProfessorById.png)
+    - `DELETE /professores/{id}`: Remove professor.
+      ![](img/remProfessorById.png)
+
+
+### Registros no Banco de Dados
+![](img/aluno.png)
+![](img/professor.png)
 
 ## Como Executar
 
@@ -118,15 +145,6 @@ A arquitetura do projeto segue o padrão **MVC (Model-View-Controller)** adaptad
 3. Execute `mvn clean install` para baixar dependências.
 4. Execute `mvn spring-boot:run` ou rode a classe `AlunoOnlineApplication.java`.
 5. A API estará disponível em `http://localhost:8080`.
-
-### Endpoints da API
-- **Alunos**:
-  - `GET /alunos`: Lista todos os alunos.
-  - `GET /alunos/{id}`: Busca aluno por ID.
-  - `POST /alunos`: Cria novo aluno.
-  - `PUT /alunos/{id}`: Atualiza aluno.
-  - `DELETE /alunos/{id}`: Remove aluno.
-- **Professores**: Endpoints similares em `/professores`.
 
 ## Contribuição
 Contribuições são bem-vindas! Abra issues ou pull requests no repositório.
